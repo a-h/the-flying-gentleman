@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>$id$</id>
+    <version>$version$</version>
+    <title>$title$</title>
+    <authors>$author$</authors>
+    <owners>$author$</owners>
+    <projectUrl>http://www.github.com/the-flying-gentleman</projectUrl>
+    <description>$description$</description>
+    <copyright>Copyright 2012</copyright>
+  </metadata>
+  <files>
+	<file src="bin\Release\FlyingGentleman.Library.dll" target="lib\net40" />
+	<file src="bin\Release\FlyingGentleman.Mocks.dll" target="lib\net40" />
+	<file src="bin\Release\FlyingGentleman.RemoteServerLibrary.WcfProxy.dll" target="lib\net40" />
+  </files>
+</package>

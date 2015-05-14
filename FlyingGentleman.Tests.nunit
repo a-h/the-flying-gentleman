@@ -1,0 +1,17 @@
+﻿<NUnitProject>
+  <Settings activeconfig="Debug" />
+  <Config name="Debug" binpathtype="Auto">
+    <assembly path="FlyingGentleman.Agent.Tests\bin\Debug\FlyingGentleman.Agent.Tests.dll" />
+    <assembly path="FlyingGentleman.Library.Tests\bin\Debug\FlyingGentleman.Library.Tests.dll" />
+    <assembly path="FlyingGentleman.Mocks.Tests\bin\Debug\FlyingGentleman.Mocks.Tests.dll" />
+    <assembly path="FlyingGentleman.RemoteServerLibrary.Tests\bin\Debug\FlyingGentleman.RemoteServerLibrary.Tests.dll" />
+    <assembly path="FlyingGentleman.RemoteServerLibrary.WcfProxy.Tests\bin\Debug\FlyingGentleman.RemoteServerLibrary.WcfProxy.Tests.dll" />
+  </Config>
+  <Config name="Release" binpathtype="Auto">
+    <assembly path="FlyingGentleman.Agent.Tests\bin\Release\FlyingGentleman.Agent.Tests.dll" />
+    <assembly path="FlyingGentleman.Library.Tests\bin\Release\FlyingGentleman.Library.Tests.dll" />
+    <assembly path="FlyingGentleman.Mocks.Tests\bin\Release\FlyingGentleman.Mocks.Tests.dll" />
+    <assembly path="FlyingGentleman.RemoteServerLibrary.Tests\bin\Release\FlyingGentleman.RemoteServerLibrary.Tests.dll" />
+    <assembly path="FlyingGentleman.RemoteServerLibrary.WcfProxy.Tests\bin\Release\FlyingGentleman.RemoteServerLibrary.WcfProxy.Tests.dll" />
+  </Config>
+</NUnitProject>

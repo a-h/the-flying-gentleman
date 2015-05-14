@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F1BFA159-7E71-4834-AE50-A7CC01422BC1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FlyingGentleman.Library</RootNamespace>
+    <AssemblyName>FlyingGentleman.Library</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <DocumentationFile>bin\Debug\FlyingGentleman.Library.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\FlyingGentleman.Library.XML</DocumentationFile>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\CommonAssemblyInfo.cs">
+      <Link>Properties\CommonAssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="AddToCollectionCallbackHandler.cs" />
+    <Compile Include="CommandLine\ICommandLine.cs" />
+    <Compile Include="CultureManagement\ICultureManagement.cs" />
+    <Compile Include="DatabaseServer\MigrateSettings.cs" />
+    <Compile Include="DatabaseServer\CreateSettings.cs" />
+    <Compile Include="DatabaseServer\IDatabaseServer.cs" />
+    <Compile Include="DatabaseServer\InstallSettings.cs" />
+    <Compile Include="DatabaseServer\ModifySettings.cs" />
+    <Compile Include="ExtensionMethods\JsonExtensions.cs" />
+    <Compile Include="FileSystem\IFileSystem.cs" />
+    <Compile Include="FileSystem\IgnoreExpression.cs" />
+    <Compile Include="FileSystem\IgnorePatterns.cs" />
+    <Compile Include="FileSystem\MirrorSettings.cs" />
+    <Compile Include="FileSystem\Operations\DeleteDirectoryOperation.cs" />
+    <Compile Include="FileSystem\Operations\CreateDirectoryOperation.cs" />
+    <Compile Include="FileSystem\Operations\FileSystemEntry.cs" />
+    <Compile Include="FileSystem\Operations\OverwriteOperation.cs" />
+    <Compile Include="FileSystem\Operations\DeleteFileOperation.cs" />
+    <Compile Include="FileSystem\Operations\IFileOperation.cs" />
+    <Compile Include="FileSystem\Operations\IgnoreOperation.cs" />
+    <Compile Include="FileSystem\Operations\CopyOperation.cs" />
+    <Compile Include="ILogEventCreator.cs" />
+    <Compile Include="InstallationReport\ReportBuilder.cs" />
+    <Compile Include="IRole.cs" />
+    <Compile Include="IServerFactory.cs" />
+    <Compile Include="ITarget.cs" />
+    <Compile Include="LogEvent.cs" />
+    <Compile Include="LogEventCollection.cs" />
+    <Compile Include="LogEventHelper.cs" />
+    <Compile Include="PackageResult.cs" />
+    <Compile Include="RabbitMqManagement\IRabbitMqManagement.cs" />
+    <Compile Include="RabbitMqManagement\RabbitMqManagementSettings.cs" />
+    <Compile Include="RabbitMqManagement\RabbitMqUser.cs" />
+    <Compile Include="RabbitMqManagement\Tags.cs" />
+    <Compile Include="Role.cs" />
+    <Compile Include="Server.cs" />
+    <Compile Include="ServerRoleResult.cs" />
+    <Compile Include="SystemPackage.cs" />
+    <Compile Include="WebServer\ApplicationPoolSettings.cs" />
+    <Compile Include="WebServer\AuthenticationMethod.cs" />
+    <Compile Include="WebServer\IdentityType.cs" />
+    <Compile Include="WebServer\IWebServer.cs" />
+    <Compile Include="WebServer\PipelineMode.cs" />
+    <Compile Include="WebServer\Runtime.cs" />
+    <Compile Include="WebServer\VirtualDirectorySettings.cs" />
+    <Compile Include="WebServer\WebsiteSettings.cs" />
+    <Compile Include="WindowsService\IWindowsService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WindowsService\ServiceStartMode.cs" />
+    <Compile Include="WindowsService\WindowsServiceSettings.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="InstallationReport\Templates\StripNamespaces.xslt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="InstallationReport\Templates\en_GB\ReportTemplate.xslt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CultureUtilities\CultureUtilities.csproj">
+      <Project>{bf1eb450-4074-47c4-a6c2-3619999a2f90}</Project>
+      <Name>CultureUtilities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
