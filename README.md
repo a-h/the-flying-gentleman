@@ -10,8 +10,9 @@ Define:
  * Run SQL Server Scripts and Entity Framework Migrations.
  * Mirror directories, delete files and transform App.Config files.
  * Setup RabbitMQ users.
- * Install and setup IIS, including setting up application pools, start and stop application pools.
+ * Install and setup IIS, set up application pools, start and stop pools.
  * Install and manage Windows services.
+
 
           static void Main(string[] args)
           {
@@ -49,4 +50,4 @@ Define:
             }
 
             InstallationHelper.InstallServerPackage(installation, settings.Arguments.IsTest);        
-        }
+          }
